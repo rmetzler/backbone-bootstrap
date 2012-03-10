@@ -7,11 +7,11 @@ module Application
     set :logging, true
 
     post '*' do
-      '[POST] API Stub'
+      {:method => :post, :api => 'ok'}.to_json
     end
 
     get '*' do
-      '[GET] API Stub'
+      {:method => :get, :api => 'ok'}.to_json
     end
   end
 end
