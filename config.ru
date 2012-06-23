@@ -8,6 +8,7 @@ $:.unshift File.expand_path("../", __FILE__)
 require "./lib/api"
 require "application"
 
+
 Sass::Engine::DEFAULT_OPTIONS[:load_paths].tap do |load_paths|
   load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
 end
@@ -26,6 +27,12 @@ map '/api' do
 end
 
 map '/' do
+
+  configure :development do
+    require 'rack-livereload'
+    use Rack::LiveReload
+  end
+
   run Application::App
 end
 

@@ -5,6 +5,8 @@ Twitter Bootstrap, Backbone, API Stub, Sinatra, HAML, SASS, Compass, Coffeescrip
 # Instructions
 
 bundle install
+bundle exec guard
+
 rackup
 http://localhost:9292
 http://localhost:9292/api

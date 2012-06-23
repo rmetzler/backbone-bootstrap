@@ -16,3 +16,12 @@ gem 'pry'
 gem 'pry-doc'
 
 gem 'json'
+
+group :development do
+  gem 'pow'
+  gem 'guard'
+  gem 'guard-pow'
+  gem 'guard-bundler'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
+end
