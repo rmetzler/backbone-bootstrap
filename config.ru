@@ -13,6 +13,12 @@ Sass::Engine::DEFAULT_OPTIONS[:load_paths].tap do |load_paths|
   load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
 end
 
+map '/assets/img' do
+  environment = Sprockets::Environment.new
+  environment.append_path 'assets/img'
+  run environment
+end
+
 map '/assets' do
   environment = Sprockets::Environment.new
   environment.append_path 'assets/javascripts'
