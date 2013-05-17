@@ -17,11 +17,13 @@
 
 ## Instructions
 
-   $ bundle install
-   $ bundle exec guard
+    $ bundle install
+    $ bundle exec guard
 
-   $ rackup
 
-   http://localhost:9292
-   http://localhost:9292/api
+    $ rackup
+
+
+    http://localhost:9292
+    http://localhost:9292/api
 
